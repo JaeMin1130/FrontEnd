@@ -1,0 +1,13 @@
+a:hover{
+    text-decoration: none;
+    color : red;
+}
+main {
+    margin-top : 10px;
+}
+#Study ul a li{
+    font-size: xx-large;
+}
+#Address ul li{
+    margin: 10px;
+}
