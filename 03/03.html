@@ -5,15 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+
+    <!--방법2 : Internal style sheet(우선순위2)-->
+    <style>
+    </style>
+
+    <!-- 방법3 : External style sheet(우선순위3) -->
+    <link rel="stylesheet" type="text/css" href="./03.css">
 </head>
 
 <body>
     <!-- body 영역을 header, main, footer로 쪼개기 -->
     <header>
-        <nav>
+        <nav> <!-- <nav> : 링크모음을 만들 때 사용한다. -->
             <!-- article 찾아갈 수 있게 하이퍼링크 걸기 -->
             <li>
-                <a href="#a2">       <!-- article id를 찾아갈 때 '#'을 사용한다. -->
+                <a href="#a2"> <!-- article id 앞에 # 을 입력한다. -->
                     개인정보
                 </a>
             </li>
@@ -36,38 +43,43 @@
     </header>
     <main>
         <!-- section, article로 나누기 -->
-        <article1 id="a1">
-            <img src="../img/photo.jpg" width="100px">
-        </article1>
-        <article2 id="a2"> <!-- id : article마다 붙이는 고유정보, 중복되면 안 된다.(오류는 안 남) -->
-            <h1>개인정보</h1>
+        <article id="a1" class="c1">
+            <div>
+                <img src="../img/photo.jpg" width="100px">
+            </div>
+        </article>
+        <article id="a2" class="c2"> <!-- id : article마다 붙이는 고유정보, 중복되면 안 된다.(오류는 안 남) -->
+
+            <!-- 방법1 : Inline style(우선순위1) -->
+            <h1 style="background-color: rgb(255, 255, 169);"> 개인정보</h1>
             <ul>
-                <li>김재민</li>
-                <li>010-5167-xxxx</li>
+                <li> 김재민 </li>
+                <li>010-5167-<span style="background-color: rgb(0, 0, 0);"> xxxx </span></li>
                 <li>ija06598@gmail.com</li>
+                <li>부산시 금정구 장전동</li>
             </ul>
-        </article2>
-        <article3 id="a3">
+        </article>
+        <article id="a3" class="c1">
             <h1>학력사항</h1>
             <ul>
                 <li>2013 ~ 2015 울산외국어고등학교</li>
                 <li>2016 ~ 2022 부산대학교 심리학과</li>
             </ul>
-        </article3>
-        <article4 id="a4">
+        </article>
+        <article id="a4" class="c2">
             <h1>자격증</h1>
             <ul>
                 <li>운전면허증 2종보통</li>
             </ul>
-        </article4>
-        <article5 id="a5">
+        </article>
+        <article id="a5" class="c3">
             <h1>사용가능언어</h1>
             <ul>
                 <li>Html</li>
                 <li>Java</li>
                 <li>Python</li>
             </ul>
-        </article5>
+        </article>
     </main>
     <footer>
         <a href="../Main.html"> <!-- 상위폴더로 갈 때는 .. -->
