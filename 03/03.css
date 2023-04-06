@@ -1,0 +1,15 @@
+/* 방법3 : External style sheet(우선순위3) */
+article 
+{
+    background-color: rgb(232, 211, 211);
+    color: rgb(0, 0, 0);
+}
+#a2,#a4 
+{
+    background-color: rgb(138, 138, 242);
+}
+
+.c3>ul>li 
+{
+    color: blueviolet;
+}
