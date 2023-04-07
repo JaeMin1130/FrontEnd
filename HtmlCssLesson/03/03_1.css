@@ -1,0 +1,21 @@
+nav{
+    align-items: left;
+    background-color: darkblue;
+    margin: 10px;
+}
+nav ul{
+    display: flex;
+    align-items: left;
+    background-color: yellow;
+    /* list index color */
+    color: red;    
+    justify-content: space-evenly /* 요소끼리 일정한 간격만큼 벌린다 ( 처음, 끝에도 적용)*/
+
+}
+nav ul li{
+
+}
+nav ul a{
+    /* letter color */
+    color: rgb(5, 155, 32);
+}

@@ -1,0 +1,77 @@
+/* 방법3 : External style sheet(우선순위3) */
+
+/* '*' : 전체 선택자 */
+* 
+{
+    margin: 3px;
+    padding: px;
+}
+
+header 
+{
+    top: 0px;
+    left: 0px;
+    position: sticky;
+}
+nav {
+    height:60px;
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+nav ul 
+{
+    display: inline-flex;
+    /* cf. inline-block */
+    justify-content: center;
+    /* 중앙으로 모으기 */
+    align-items: center;
+    padding: 30px;
+    height: 5px;
+    background-color: darkblue;
+}
+
+nav a 
+{
+    text-decoration: none;
+    /* 밑 줄 없애기 */
+    color: aliceblue;
+}
+
+/* 마우스 커서 올리면 변함 */
+nav a:hover, nav li:hover 
+{
+    background-color: aliceblue;
+    color: red;
+}
+
+#a1 
+{
+    display: flex;
+    /* a1을 flex 박스로 지정 -> 하위 박스들의 위치를 조정할 수 있다. */
+    justify-content: right;    /* 가로축 */
+    align-items: left;       /* 세로축 */
+    flex-direction: column;    /* 아래로 정렬 */ 
+}
+#a1 img 
+{ 
+    width : 100px;
+    border-radius: 50px;
+}
+main
+{
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+#a2, #a3
+{
+    background-color: rgb(138, 138, 242);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
