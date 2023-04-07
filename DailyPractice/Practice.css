@@ -71,7 +71,6 @@ section>#a1>p:nth-child(1) {
     font-size: 2rem;
     font-weight: 1000;
 }
-/* last-of-type */
 section>#a1>p:last-of-type{
     font-size: 1.3rem;
     font-weight: 500;
