@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+    font-size: 50px;
+}
+
+body {
+    background-color: #eee;
+}
+
+.container {
+    /* 가운데 정렬 */
+    margin: auto;
+    width: 200px;
+    /* 스크롤바 안 생김 */
+    height: 100vh;
+    display: flex;
+    /* 정렬 방향 */
+    flex-direction: column;
+    /* 박스들 가운데 정렬 */
+    align-items: center;
+    /* 통째로 가운데로 이동 */
+    justify-content: center;
+    /* inline 요소 가운데로 */
+    text-align: center;
+}
+
+header {
+    color: rebeccapurple;
+}
+
+/* p, form */
+section {
+    width: 100%;
+    /* 위 10, 아래 40 */
+    margin: 10px auto 40px;
+}
+
+/* please sign in */
+section p {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+/* Email address, Password */
+section input[placeholder] {
+    padding: 11px;
+    width: 100%;
+    /* 테두리 */
+    border: .5px solid #ddd;
+    outline: none;
+    transition: box-shadow .5s;
+}
+
+/* ??? */
+section input[placeholder]::placeholder {
+    font-size: 18px;
+}
+
+/* input 1  둥글게 */
+section input:nth-of-type(1) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* input 2 둥글게 */
+section input:nth-of-type(2) {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+section input[type="checkbox"] {
+    margin-top: .8rem;
+    /* checkbox 크기 */
+    transform: scale(1.2);
+    transform-origin: center center;
+}
+
+/* Remember me */
+section label {
+    display: inline-block;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+section input[type="submit"] {
+    display: block;
+    width: 100%;
+    border: 1px solid skyblue;
+    margin-top: 1.5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: skyblue;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    outline: none;
+    transition: all .5s;
+}
+
+section input[type="submit"]:hover {
+    background-color: deepskyblue;
+    border: 1px solid deepskyblue;
+}
+
+footer {
+    font-size: 1.2rem;
+    color: #666
+}
