@@ -80,7 +80,6 @@ section>a {
     /* a가 inline 속성이라 block 속성으로 바꾼다. */
     display: block;
     border: 1px solid black;
-
     width:150px;
     font-size: 1.3rem;
     font-weight: 600;
