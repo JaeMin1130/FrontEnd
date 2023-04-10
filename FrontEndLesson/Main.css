@@ -4,18 +4,21 @@ body{
 main {
     margin-top : 10px;
 }
+
 a{
     text-decoration: none;
 }
 a:hover{
     color : tomato;
 }
-a li{
+li{
+    font-size: large;
+}
+li a{
     color: #333;
+    font-size: large;
 }
-a li:hover{
-    color: tomato;
-}
+
 h1 {
     font-size: 30px;
 }
