@@ -14,7 +14,7 @@ function randomString() {
     // 배열 변수 생성
     let stringArr = ["Learn to HTML", "Learn to CSS",
         "Learn to JavaScript", "Learn to JAVA", "Learn to Python"];
-    // stringArr[] 랜덤 출력,       floor : 소수점 떼기,  random : 0 ~ 1 랜덤값
+    // stringArr[] 랜덤 출력,       floor : 소수점 떼기,  random : 0 ~ 1 사이 랜덤값
     let oneString = stringArr[Math.floor(Math.random() * stringArr.length)];
     // split : 한 글자씩 나눠서 배열에 넣기
     let letterArr = oneString.split("");
