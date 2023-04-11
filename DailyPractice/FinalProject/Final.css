@@ -1,0 +1,70 @@
+/* 웹 브라우저의 기본 스타일 시트 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* a:link 방문 전 링크 상태, a:visited 방문 후 링크 상태 */
+a,
+a:link,  
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* header 영역*/
+.container {
+    width: 1140px;
+    /* top-bottom left-right */
+    /* 수평 방향에서 중앙으로 위치하게 됨 */
+    margin: 0 auto;
+}
+
+header {
+    position: absolute;
+    /* 스크롤했을 때 다른 요소 밑에 가려서 안 보이는 일이 없도록 함 */
+    z-index: 1;
+    /* 상속되는 속성이라서 하위 태그에 자동으로 상속된다. */
+    color: black;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+}
+
+header .container {
+    display: flex;
+    /* 자식 태그 2개가 양끝으로 가게 한다. */
+    justify-content: space-between;
+    /* 수직정렬 */
+    align-items: center;
+    width: 100%;
+}
+/* 자식: list tag */
+header nav ul {
+    /* 메뉴를 가로 한 줄로 배치 */
+    display: flex;
+}
+/* 자식: button tag */
+header nav ul li{
+    padding: 10px;
+}
+/* button 5개 */
+header button{
+    /* transparent : 투명 */
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+/* 왼쪽 button */
+header h1 button{
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* 오른쪽 button */
+header nav ul li button{
+    font-size: 1.2rem;
+}
