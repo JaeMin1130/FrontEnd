@@ -1,14 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: darkslateblue;
 }
 
-.wrap{
+.wrap {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -16,33 +16,39 @@ body{
     color: white;
     text-align: center;
 }
-.material-symbols-outlined{
+
+.material-symbols-outlined {
     font-size: 10rem;
 }
-.lg-text{
+
+.lg-text {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
-.sm-text{
+
+.sm-text {
     font-size: 1.5rem;
 }
-#dynamic{
+
+#dynamic {
     position: relative;
     display: inline-block;
 }
+
 /* p태그 요소 뒤에 가상요소를 만들어 커서모양으로 만든다 */
-#dynamic::after{
-    content:"";
-    display:block;
+#dynamic::after {
+    content: "";
+    display: block;
     position: absolute;
-    top:0;
+    top: 0;
     right: -10px;
     width: 3px;
     height: 95%;
     background-color: white;
 }
+
 /* dynamic이 class 이름에 active가 있으면*/
-#dynamic.active::after{
-    display: none;    
+#dynamic.active::after {
+    display: none;
 }

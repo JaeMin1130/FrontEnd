@@ -28,7 +28,7 @@ function typing(randomArr) {
         // shift : 배열의 앞 값부터 배열에서 빼고 출력
         // target의 글씨에 추가해라
         target.textContent += randomArr.shift();
-        // 0.08초에 한 번 함수를 실행해라
+        // 0.07초에 한 번 함수를 실행해라
         setTimeout(function () { typing(randomArr); }, 70);
     } else {
         // 3초 뒤에 resetTyping 함수를 실행해라
