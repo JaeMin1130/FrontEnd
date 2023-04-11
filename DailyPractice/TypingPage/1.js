@@ -9,6 +9,7 @@ function blink() {
 // 0.6초에 한 번 넣어라
 setInterval(blink, 600);
 
+// 한 글자씩 떼서 배열로 만드는 함수
 function randomString() {
     // 배열 변수 생성
     let stringArr = ["Learn to HTML", "Learn to CSS",
