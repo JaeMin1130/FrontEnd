@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="Convert_Temp.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <form action="">
+            <div class="container">
+                <h1>Convert Temperature</h1>
+                <article>
+                    <div class="grid">
+                        <select id="sel1">
+                            <option value="℃" selected>섭씨온도(℃)</option>
+                            <option value="℉">화씨온도(℉)</option>
+                        </select>
+                        <select id="sel2">
+                            <option value="℃">섭씨온도(℃)</option>
+                            <option value="℉" selected>화씨온도(℉)</option>
+                        </select>
+                    </div>
+                    <div class="grid">
+                        <input type="number" id="t1">
+                        <div id="d1" class="letter"></div>
+                        <input type="number" id="t2">
+                        <div id="d2" class="letter"></div>
+                    </div>
+                </article>
+            </div>
+        </form>
+    </main>
+    <script src="./Convert_Temp.js"></script>
+</body>
+
+</html>
