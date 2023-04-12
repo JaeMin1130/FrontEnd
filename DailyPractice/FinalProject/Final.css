@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 /* 웹 브라우저의 기본 스타일 시트 초기화 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* a:link 방문 전 링크 상태, a:visited 방문 후 링크 상태 */
 a,
-a:link,  
+a:link,
 a:visited {
     color: inherit;
     text-decoration: none;
@@ -25,11 +28,10 @@ li {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     /* 스크롤했을 때 다른 요소 밑에 가려서 안 보이는 일이 없도록 함 */
     z-index: 1;
     /* 상속되는 속성이라서 하위 태그에 자동으로 상속된다. */
-    color: black;
     top: 0;
     width: 100%;
     padding: 1rem;
@@ -43,28 +45,130 @@ header .container {
     align-items: center;
     width: 100%;
 }
+
 /* 자식: list tag */
 header nav ul {
     /* 메뉴를 가로 한 줄로 배치 */
     display: flex;
 }
+
 /* 자식: button tag */
-header nav ul li{
+header nav ul li {
     padding: 10px;
 }
+
 /* button 5개 */
-header button{
+header button {
     /* transparent : 투명 */
     background-color: transparent;
     border: 0;
     cursor: pointer;
 }
+
 /* 왼쪽 button */
-header h1 button{
+header h1 button {
     font-size: 2rem;
     font-weight: bold;
+    color: white;
 }
+
 /* 오른쪽 button */
-header nav ul li button{
+header nav ul li button {
     font-size: 1.2rem;
+    color: white;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    /* linear-gradient : 배경색이 이미지를 덮는다. */
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('./img/background.jpg') center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main h4 {
+    font-size: 2rem;
+}
+
+main h2 {
+    font-size: 3.5rem;
+    margin: 2rem 0;
+    /* 글자 간격 */
+    letter-spacing: 3px;
+    font-family: 'Varela Round', sans-serif;
+}
+/* h2 span 요소 다음에 커서 만들기 */
+/* 가상 요소 선택자 ::after */
+main h2 span::after{
+    content: "";
+    height: 40px;
+    width: 3px;
+    background-color: #fff;
+    display: inline-block;
+    animation: blink .7s ease-in-out infinite;
+    transform: translate(3px, 5px);
+}
+@keyframes blink{
+    0%{
+        /* 불투명 */
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+main p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+}
+
+main button.download {
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main button.mouse {
+    background-color: transparent;
+    border: none;
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: upDown 1s ease-in-out infinite;
+    cursor: pointer;
+}
+
+@keyframes upDown {
+    0% {
+        bottom: 1rem;
+    }
+
+    50% {
+        bottom: 1.5rem;
+    }
+
+    100% {
+        bottom: 1rem;
+    }
+}
+
+.material-symbols-outlined {
+    font-size: 3rem;
+    font-variation-settings:
+        'FILL' 1,
+        'opsz' 48
 }
