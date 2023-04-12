@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="./Dice.css">
+    <title>Random Dice</title>
+</head>
+
+<body>
+    <main class="container">
+        <article>
+            <header>
+                <h1>Dice Game</h1>
+                <h1></h1>
+            </header>
+            <h2 id="h2Id" class="h2Class"><img></h2>
+            <footer>
+                <form>
+                    <fieldset>
+                        <h2>
+                            <legend>Choose Number</legend>
+                        </h2>
+                        <div class="grid">
+                            <label for="r1">
+                                <input type="radio" id="r1" name="num" value="1"> 1
+                            </label>
+                            <label for="r2">
+                                <input type="radio" id="r2" name="num" value="2"> 2
+                            </label>
+                            <label for="r3">
+                                <input type="radio" id="r3" name="num" value="3"> 3
+                            </label>
+                            <label for="r4">
+                                <input type="radio" id="r4" name="num" value="4"> 4
+                            </label>
+                            <label for="r5">
+                                <input type="radio" id="r5" name="num" value="5"> 5
+                            </label>
+                            <label for="r6">
+                                <input type="radio" id="r6" name="num" value="6"> 6
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="grid">
+                        <button id="bt1">확인</button>
+                        <button type="reset">취소</button>
+                    </div>
+                </form>
+            </footer>
+        </article>
+    </main>
+
+    <script src="./Dice1.js"></script>
+</body>
+
+</html>

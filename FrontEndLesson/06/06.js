@@ -25,12 +25,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // }
 
     // for of문
-//     for (const item of bts) {
-//         console.log(item.textContent)
-//     }
-//     for(const [i, item] of bts.entries()){
-//         console.log(i, item.textContent);
-//     }
+    // for (const item of bts) {
+    //     console.log(item.textContent)
+    // }
+    // for(const [i, item] of bts.entries()){
+    //     console.log(i, item.textContent);
+    // }
  }
 )
 ;
