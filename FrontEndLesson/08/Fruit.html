@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+            <article>
+                <header>
+                    <hgroup>
+                        <h1>배열 다루기</h1>
+                        <h2></h2>
+                    </hgroup>
+                </header>
+                <input type="text" id="result" readonly>
+                <div class="grid">
+                    <button class="produce">사과</button>
+                    <button class="produce">바나나</button>
+                    <button class="produce">오렌지</button>
+                    <button class="produce">수박</button>
+                </div>
+                <div class="grid" >
+                    <button class="remove">사과 삭제</button>
+                    <button class="remove">바나나 삭제</button>
+                    <button class="remove">오렌지 삭제</button>
+                    <button class="remove">수박 삭제</button>
+                </div>
+                <div class="grid">
+                    <button class="change">사과 -> 당근</button>
+                    <button class="change">바나나 -> 오이</button>
+                    <button class="change">오렌지 -> 아보카도</button>
+                    <button class="change">수박 -> 브로콜리</button>
+                </div>
+                <button type="reset">취소</button>
+            </article>
+        </form>
+    </div>
+    <script src="./Fruit.js"></script>
+</body>
+
+</html>
