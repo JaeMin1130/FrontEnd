@@ -37,7 +37,7 @@ function reverse() {
     // 방법2
     // split() : 한 글자씩 분리해서 배열로, reverse() : 배열 거꾸로
     let arr = t1.value.split('').reverse()
-    // tostring()하면 쉼표로 구분됨 -> join() 사용
+    // 배열을 문자열로 변환 : tostring()하면 쉼표로 구분됨 -> join() 사용
     if (t1.value == arr.join('')) {
         t2.value = "회문입니다.";
     } else {
