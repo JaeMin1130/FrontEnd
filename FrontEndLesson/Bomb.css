@@ -1,0 +1,32 @@
+article{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#line1, #line2, #line3{
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    height: 170px;
+}
+
+#line1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#line2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#line3{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+button{
+    margin-top: 3rem;
+}
+
