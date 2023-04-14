@@ -1,31 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 article{
     margin: 0;
     padding: 0;
     display: flex;
+    border: 2px solid black;
 }
 
 #line1, #line2, #line3{
-    text-align: center;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 170px;
+    height: 510px;
 }
 
-#line1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
 #line2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
 }
-#line3{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+.line1, .line2, .line3{
+    width: 100%;
+    height: 170px;
+    border-bottom: 2px solid black;
 }
+
 button{
     margin-top: 3rem;
 }
