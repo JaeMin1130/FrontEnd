@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const boxes = document.querySelectorAll(".box div")
-    const button = document.querySelector("#button") 
+    const button = document.querySelector("#button")
 
     let arr = [0, 0, 0, 0, 0, 0, 0, 0, 1]
     let flag = true
@@ -31,25 +31,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         box.addEventListener("click", () => {
             let n = box.textContent
-        if(flag){
-            document.querySelector("h2").innerHTML = "폭탄을 섞어주세요."
-        }
-        if(!flag){
-            if (arr[n - 1] == 0) {
-                box.innerHTML = '<img src = "./img/hart.png">'
-                count++
-                sum -= n
-                if(count == 8){
-                document.querySelector("h2").innerHTML = "성공"
-                boxes[sum-1].innerHTML = '<img src = "./img/boom.png">'
-                flag = true
-                }
-            } else if (arr[n - 1] == 1) {
-                box.innerHTML = '<img src = "./img/boom.png">'
-                flag = true
-                document.querySelector("h2").innerHTML = "실패"
+            if (flag) {
+                document.querySelector("h2").innerHTML = "폭탄을 섞어주세요."
             }
-        }
+            if (!flag) {
+                if (arr[n - 1] == 0) {
+                    box.innerHTML = '<img src = "./img/hart.png">'
+                    count++
+                    sum -= n
+                    if (count == 8) {
+                        document.querySelector("h2").innerHTML = "성공"
+                        boxes[sum - 1].innerHTML = '<img src = "./img/boom.png">'
+                        flag = true
+                    }
+                } else if (arr[n - 1] == 1) {
+                    box.innerHTML = '<img src = "./img/boom.png">'
+                    flag = true
+                    document.querySelector("h2").innerHTML = "실패"
+                }
+            }
         })
     }
 })

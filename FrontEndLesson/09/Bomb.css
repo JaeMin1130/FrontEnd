@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-.box{
+
+.box {
     display: flex;
     width: 510px;
     height: 170px;
@@ -12,7 +13,8 @@
     transform: translateX(250px);
 
 }
-.box div{
+
+.box div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,11 +24,16 @@
     font-size: 2rem;
     font-weight: bold;
 }
-#line1, #line3{
+
+#line1,
+#line3 {
     border-top: 2px solid black;
     border-bottom: 2px solid black;
 }
-#no2, #no5, #no8{
+
+#no2,
+#no5,
+#no8 {
     border-left: 2px solid black;
     border-right: 2px solid black;
 }
@@ -35,9 +42,9 @@ button {
     margin-top: 3rem;
     width: 45%;
     transform: translateX(265px);
-} 
+}
 
-h2{
+h2 {
     color: red;
     text-align: center;
 }
