@@ -1,5 +1,4 @@
 # K-digital 3기 FrontEnd 수업 
-https://jaemin1130.github.io/FrontEnd/
 + 23.04.04: HTML 구조 연습
 + 23.04.05: HTML 및 git 연습
 + 23.04.06: 시멘틱 태그, CSS
@@ -10,6 +9,6 @@ https://jaemin1130.github.io/FrontEnd/
 + 23.04.12: 주사위 출력2, 온도 변환기
 + 23.04.13: 문자열 다루기(palindrome)
 + 23.04.14: 배열 다루기(fruit)
-+ 23.04.18: (PJ2)배열 다루기(bomb)
++ 23.04.18: (PJ2)배열 다루기(Bomb Game)(https://bombgame-bb5f1.firebaseapp.com/)
 + 23.04.20: fetch 연습 with JS(Box Office)
 + 23.04.21: React jsx 문법 연습(Box Office)
