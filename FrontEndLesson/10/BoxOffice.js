@@ -16,7 +16,7 @@ date.addEventListener("change", () => {
         let boxTag = ''
         for(list of boxList){
             boxTag += '<details>'
-            boxTag += `<summary role="button" class="secondary">${list.rank}위 ${list.movieNm} ${list.rankInten}</summary>`
+            boxTag += `<summary role="button" class="secondary">${list.rank}위 ${list.movieNm}</summary>`
             boxTag += '<ul>'
             boxTag += `<li>개봉일 : ${list.openDt}</li>`
             boxTag += `<li>누적 관객수 : ${parseInt(list.audiAcc).toLocaleString()}명</li>` // 천단위 콤마
