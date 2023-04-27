@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-let title = document.querySelector('#list li')
+    
 const date = document.querySelector('#date')
 
 date.addEventListener("change", () => {

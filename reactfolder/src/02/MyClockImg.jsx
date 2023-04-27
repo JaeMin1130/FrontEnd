@@ -1,10 +1,10 @@
 import logo from '../logo.svg';
-const MyClockImg = function() {
+const MyClockImg = function () {
 
-    return(
+    return (
         <div>
-        <img src={logo} className = "App-logo" alt="logo" />
-    </div>
+            <img src={logo} className="App-logo" alt="logo" />
+        </div>
     )
 }
 

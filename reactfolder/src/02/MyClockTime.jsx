@@ -1,12 +1,16 @@
-import { useState} from "react";
-const MyClockTime = function() {
+import { useState } from "react";
 
-    const[myTime, setMyTime] = useState(new Date().toLocaleTimeString());
-    
-    // setTimeout(setMyTime(new Date().toLocaleTimeString()), 1000);
-    
+const MyClockTime = function () {
+
+    const [myTime, setMyTime] = useState(new Date().toLocaleTimeString());
+
+    // 콜백 함수 :  함수의 매개변수로 전달되는 함수
+    setTimeout(() => setMyTime(new Date().toLocaleTimeString()), 1000);
+
     // let myTime = new Date().toLocaleTimeString();
-    return(
+
+    return (
+
         <footer>
             <h1>
                 {myTime}
@@ -16,4 +20,4 @@ const MyClockTime = function() {
     )
 }
 
-export default MyClockTime ;
+export default MyClockTime;

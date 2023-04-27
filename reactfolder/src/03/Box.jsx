@@ -1,5 +1,6 @@
 import BoxRows from "./BoxRows"
 import "./Box.css"
+import BoxDate from "./BoxDate"
 const Box = function () {
     let mvList =
         [
@@ -18,7 +19,10 @@ const Box = function () {
     return (
         <main className="container">
             <article>
-                <header><h1>일일박스오피스</h1></header>
+                <header>
+                    <h1>일일박스오피스</h1>
+                    <BoxDate />
+                </header>
                 <table>
                     <thead>
                         <tr>
@@ -28,7 +32,7 @@ const Box = function () {
                             <th scope="col">순위증감</th>
                         </tr>
                     </thead>
-                        <BoxRows mv = {mvList} />
+                    <BoxRows mv={mvList} />
                 </table>
             </article>
         </main>
