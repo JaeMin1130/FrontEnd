@@ -1,0 +1,5 @@
+article > div ,article > footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

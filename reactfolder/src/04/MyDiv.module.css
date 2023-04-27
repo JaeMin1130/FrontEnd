@@ -1,0 +1,12 @@
+.title{
+    color: darkgreen;
+}
+.aul{
+    display: flex;
+}
+.ali{
+    width: 45%;
+}
+footer h2{
+    text-align: right;
+}

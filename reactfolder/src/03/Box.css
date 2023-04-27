@@ -1,0 +1,11 @@
+.rank, .sales{
+    text-align: end;
+}
+.name, .increase{
+    text-align: center;
+}
+
+tr th{
+    text-align: center;
+    font-weight: bold;
+}
