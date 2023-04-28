@@ -14,3 +14,4 @@
 + 23.04.21: React jsx 문법 연습(Box Office)
 + 23.04.25: React 컴포넌트, state1
 + 23.04.27: React 컴포넌트, state2
++ 23.04.28: React 삼항 연산자, state, 배열, key-value
