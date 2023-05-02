@@ -13,13 +13,14 @@ const Forecast = function () {
     }
 
     // state 생성
-    const [info, setInfo] = useState("")
-    const [tdState, settdState] = useState("")
-    
+    const [infoTag, setInfoTag] = useState("")
+    const [bodyTag, setBodyTag] = useState("")
+
     // 날짜태그
     let dtTag = []
     dtTag = Object.keys(dtcn).map((item, idx) =>
-        <div className={tdState == item ? style.td1 : style.td} key={idx} onClick={() => detail(item)}>
+        // 리액트는 모든 기본 이벤트를 on으로 시작하는 props로 나타낸다
+        <div className={bodyTag == item ? style.td1 : style.td} key={idx} onClick={() => detail(item)}>
             {item}
         </div>)
 
@@ -30,16 +31,16 @@ const Forecast = function () {
         a = a.map((i) => i.split(":"))
 
         a = a.map((j) => <div className={style.jAll}>
-                            <span className={style.j0}>{j[0]}</span>
-                            <span className = {j[1].trim() == "높음" ? style.s21
-                                                : j[1].trim() == "보통" ? style.s22 : style.s23}> 
-                                {j[1]} 
-                            </span>
-                        </div>
+            <span className={style.j0}>{j[0]}</span>
+            <span className={j[1].trim() == "높음" ? style.s21
+                : j[1].trim() == "보통" ? style.s22 : style.s23}>
+                {j[1]}
+            </span>
+        </div>
         )
 
-        setInfo(a)
-        settdState(item)
+        setInfoTag(a)
+        setBodyTag(item)
     }
 
     return (
@@ -52,7 +53,7 @@ const Forecast = function () {
                     </div>
                 </header>
                 <div className="grid">
-                    {info}
+                    {infoTag}
                 </div>
             </article>
         </main>
