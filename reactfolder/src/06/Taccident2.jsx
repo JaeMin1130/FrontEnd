@@ -4,15 +4,14 @@ const Taccident2 = function ({ c2, sel1, sel2, setSel2 }) {
     let arr = []
     for (let i = 0; i < c2.length; i++) {
         if (c2[i][0] == sel1) {
-            arr.push(c2[i][1])
+            arr.push(c2[i])
         }
     }
-    
     const btTag2 = arr.map(item => 
         // 태그 끼울때는 {} 안 한다.
         <li key={item}>
             <button onClick={() => setSel2(item)}>
-                {item}
+                {item[1]}
             </button>
         </li>
     )
