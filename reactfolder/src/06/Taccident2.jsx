@@ -1,3 +1,5 @@
+import style from "./Style.module.css"
+
 const Taccident2 = function ({ c2, sel1, sel2, setSel2 }) {
 
     // 대분류 태그 만들기
@@ -10,7 +12,8 @@ const Taccident2 = function ({ c2, sel1, sel2, setSel2 }) {
     const btTag2 = arr.map(item => 
         // 태그 끼울때는 {} 안 한다.
         <li key={item}>
-            <button onClick={() => setSel2(item)}>
+            <button onClick={() => setSel2(item)}
+              className={sel2 && item[1] === sel2? style.bt1 : style.bt11}>
                 {item[1]}
             </button>
         </li>

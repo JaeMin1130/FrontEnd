@@ -1,7 +1,9 @@
 import Tdata from "./dataTaccident.json"
 import Taccident1 from "./Taccident1"
 import Taccident2 from "./Taccident2"
+import Detail from "./Detail"
 import { useState, useEffect } from "react"
+
 
 const Taccident = function () {
     const data = Tdata.data
@@ -22,42 +24,25 @@ const Taccident = function () {
     // }
 
     const [sel1, setSel1] = useState(0)
-    const [sel2, setSel2] = useState([])
+    const [sel2, setSel2] = useState(0)
     const [selData, setSelData] = useState({});
-    const [viewTag, setviewTag] = useState('');
 
+    // useEffect : 예약 함수, 여기서는 안 쓰면 'Too many re-render' 뜸
     useEffect(() => {
-        if (sel2 !== undefined) {
             let temp = data.filter((item) =>
                 item.사고유형_대분류 === sel2[0] && item.사고유형_중분류 === sel2[1])
             setSelData(temp[0]);
-            console.log(temp[0])
-        }
-
     }, [data, sel2]);
-
-    useEffect(() => {
-        if (selData !== undefined && Object.keys(selData).length !== 0) {
-            const vkey = ["사고건수", "사망자수", "중상자수", "경상자수", "부상신고자수"]
-            let ttag = vkey.map((k) =>
-                <div key={k} className='grid'>
-                    <span>{k}</span>
-                    <span>{parseInt(selData[k]).toLocaleString()}</span>
-                </div>
-            );
-
-            setviewTag(ttag);
-        }
-    }, [selData]);
+    
     return (
         <main className="container">
             <article>
                 {/* 사용자 태그(컴포넌트) 끼우기 변수랑 함수 넘기기*/}
-                <Taccident1 c1={category1} setSel1={setSel1} />
+                <Taccident1 c1={category1} sel1={sel1} sel2 = {sel2} setSel1={setSel1} />
                 <Taccident2 c2={category2} sel1={sel1} setSel2={setSel2} />
             </article>
             <article>
-                {viewTag}
+                {selData && <Detail selData={selData}/>}
             </article>
         </main>
     )
