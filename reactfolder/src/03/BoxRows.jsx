@@ -1,12 +1,11 @@
 // probs : 컴포넌트 간의 데이터 이동수단
 // const BoxRows = function(probs){
 // const mvList = [...probs.mv]
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const BoxRows = function ({ mv }) {
     let trList = []
     let imoji = ""
-
 
     for (let item of mv) {
         if (item.rankInten > 0) {
@@ -24,20 +23,18 @@ const BoxRows = function ({ mv }) {
                 <td className="sales">{parseInt(item.salesAmt).toLocaleString()}원</td>
                 <td className="increase">{imoji}</td>
             </tr>)
-
-
     }
-
     const [foot, setfoot] = useState("")
     function showMv(props) {
         setfoot(
             <div>
-                "{props.movieNm}"&nbsp;&nbsp;&nbsp; 
+                "{props.movieNm}"&nbsp;&nbsp;&nbsp;
                 개봉일 : {props.openDt}&nbsp;&nbsp;&nbsp;
                 누적관객수 : {parseInt(props.audiAcc).toLocaleString()}명
             </div>
         )
     }
+    useEffect(() => { setfoot() }, [mv])
 
     return (
         <>
@@ -48,7 +45,7 @@ const BoxRows = function ({ mv }) {
                 <tr>
                     {/* colSpan : column 합치기 */}
                     <td colSpan={3}>{foot}</td>
-                <td><a href="http://www.cgv.co.kr/ticket/"> 예매하러 가기</a></td>
+                    <td><a href="http://www.cgv.co.kr/ticket/"> 예매하러 가기</a></td>
                 </tr>
             </tfoot>
         </>
