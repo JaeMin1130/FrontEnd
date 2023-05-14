@@ -1,0 +1,19 @@
+hgroup {
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h6 {
+    transform: translate(10px, 15px);
+}
+
+.keyword {
+    display: inline-flex;
+    margin: 5px;
+    background-color: rgb(216, 246, 234);
+    color: rgb(77, 87, 161);
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+}
