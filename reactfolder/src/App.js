@@ -12,12 +12,12 @@ function App() {
   return (
     // <Hello/>
     // <MyClock />
-    // <Box/>
+    <Box/>
     // <MyDiv/>
     // <Forecast/>
     // <Taccident/>
     // <Ref/>
-    <Tour/>
+    // <Tour/>
   );
 }
 

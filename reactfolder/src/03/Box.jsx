@@ -17,8 +17,10 @@ const Box = function () {
     // 어제 list, 한 번만 실행
     useEffect(() => {
         let yesterday = new Date()
-        yesterday = Number(yesterday.toLocaleDateString().replaceAll('. ', '0').replace('.', '')) - 1
-        fetchData(yesterday)
+        yesterday = String(yesterday.toLocaleDateString().replaceAll(".", "")).split(" ")
+        if(yesterday[1].length == 1) yesterday[1] = "0" + yesterday[1] 
+        if(yesterday[2].length == 1) yesterday[2] = "0" + yesterday[2] 
+        fetchData(Number(yesterday.join(""))-1)
     }, [])
 
     // 날짜별 list
