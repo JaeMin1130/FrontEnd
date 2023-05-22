@@ -6,6 +6,8 @@ import Forecast from './05/Forecast';
 import Taccident from './06/Taccident';
 import Ref from './07/Ref';
 import Tour from './08/Tour';
+import RouteMain from './09_Router/RouteMain';
+import Fcst from './10_Forecast/Fcst';
 import './App.css';
 
 function App() {
@@ -17,7 +19,9 @@ function App() {
     // <Forecast/>
     // <Taccident/>
     // <Ref/>
-    <Tour/>
+    // <Tour/>
+    // <RouteMain/>
+    <Fcst/>
   );
 }
 
