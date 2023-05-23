@@ -2,47 +2,53 @@ import { useRef, useState, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import qs from 'query-string'
 import data from "./json/getcode.json"
+import FcstTable from "./FcstTable"
 
 const VillageFcst = function () {
     const arr = data.map((item) => item).filter((item) => item.예보구분 == "단기예보")
-    const tag = arr.map((item, idx) => <option value={item["항목값"]} key={"loc" + idx}>{item["항목명"]}</option>)
+    const tag = arr.map((item, idx) => <option value={[item["항목값"], item["단위"]]} key={"loc" + idx}>{item["항목명"]}({item["단위"]})</option>)
     const category = useRef()
+    const choice = useRef()
 
-    const [table, setTable] = useState()
+    const [text, setText] = useState()
+    const [unit, setUnit] = useState()
     const [info, setInfo] = useState()
-
+    const [day, setDay] = useState()
     const loc = useLocation().search
-    const date = qs.parse(loc).date.replaceAll("-", "")
+    const date = qs.parse(loc).date
     const location = qs.parse(loc).location
-    const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=pwxPD7SvaQhz8AtCIjk2pem2kA4vkXCY5n4RIlREYOy1syfPerNWQQ09wWOQehCXOrObm74%2BO04%2BSTm04ksrzg%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${date}&base_time=0630&nx=${location[0]}&ny=${location[1]}`
+    const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=pwxPD7SvaQhz8AtCIjk2pem2kA4vkXCY5n4RIlREYOy1syfPerNWQQ09wWOQehCXOrObm74%2BO04%2BSTm04ksrzg%3D%3D&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${date}&base_time=0500&nx=${location[0]}&ny=${location[1]}`
+
 
     const fetchData = (url) => {
         fetch(url)
             .then((resp) => resp.json())
             .then((data) => setInfo(data.response.body.items.item.map((item) => item)))
             .catch((err) => console.log(err))
-        }
+    }
 
-    useEffect(() => {fetchData(url)}, [])
+    useEffect(() => { fetchData(url) }, [])
 
-    const createTable = function(){
-        if(category.current.value != undefined){
-            setTable(info.filter((item) => item.category == category.current.value).map((item, idx) => <tr key = {idx}>
-                                                <td>{item["fcstDate"]}</td>
-                                                <td>{item["fcstTime"]}</td>
-                                                <td>{item["fcstValue"]}</td>
-                                            </tr>
-                                        ))}}
+    const setParam = function () {
+        setText(category.current.value.split(",")[0])
+        setUnit(category.current.value.split(",")[1])
+    }
+
     return (
         <article>
             <div className="grid">
                 <h2>단기예보</h2>
             </div>
-            <select ref = {category} name="항목명" onChange={() => {createTable()}}>
+            <select ref={category} name="항목명" onChange={() => setParam()}>
                 <option>항목선택</option>
                 {tag}
             </select>
-            {table}
+            <div className="grid">
+                <label><input type="radio" name="date" ref={choice} onChange={() => {setDay(choice.current.value)}}/>오늘</label>
+                <label><input type="radio" name="date" ref={choice} onChange={() => {setDay(choice.current.value)}}/>내일</label>
+                <label><input type="radio" name="date" ref={choice} onChange={() => {setDay(choice.current.value)}}/>모레</label>
+            </div>
+            <FcstTable info={info} text={text} unit={unit} day = {day}/>
         </article>
     )
 }
