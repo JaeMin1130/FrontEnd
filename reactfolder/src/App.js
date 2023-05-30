@@ -8,6 +8,7 @@ import Ref from './07/Ref';
 import Tour from './08/Tour';
 import RouteMain from './09_Router/RouteMain';
 import Fcst from './10_Forecast/Fcst';
+import Cnt from './11_Recoil_copy/Cnt';
 import './App.css';
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
     // <Ref/>
     // <Tour/>
     // <RouteMain/>
-    <Fcst/>
+    // <Fcst/>
+    <Cnt/>
   );
 }
 
